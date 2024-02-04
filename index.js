@@ -18,7 +18,8 @@ async function asking() {
             })
             .then(data => {
                 console.log(data);
-                document.querySelector('.resultSearch').textContent = JSON.stringify(data);
+                let result = JSON.stringify(data);
+                document.querySelector('.resultSearch').textContent = result.replaceAll(",", "\n");
             })
     }
 
